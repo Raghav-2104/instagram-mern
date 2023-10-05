@@ -38,7 +38,7 @@ const Header = () => {
                     <Link to="/">{profileToggle || !onHome ? homeOutline : homeFill}</Link>
 
                     <Link to="/direct/inbox">{onChat ? messageFill : messageOutline}</Link>
-
+                    <Link to="/direct/new">Hello</Link>
                     <div onClick={() => setNewPost(true)} className="cursor-pointer">{postUploadOutline}</div>
 
                     <span className="hidden sm:block">{exploreOutline}</span>

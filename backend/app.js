@@ -13,7 +13,7 @@ app.use(fileUpload());
 app.use('/public', express.static('public'));
 
 if (process.env.NODE_ENV != "production") {
-    require('dotenv').config({ path: 'backend/config/config.env' });
+    require('dotenv').config({ path: 'backend/config/config.env'});
 }
 
 // import routes
@@ -29,6 +29,7 @@ app.use('/api/v1', message);
 
 // deployment
 __dirname = path.resolve();
+console.log(process.env.NODE_ENV)
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '/frontend/build')))
 

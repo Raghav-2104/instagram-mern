@@ -11,6 +11,8 @@ import Profile from './components/User/Profile';
 import UpdateProfile from './components/User/Update/UpdateProfile';
 import UpdatePassword from './components/User/Update/UpdatePassword';
 import SpinLoader from './components/Layouts/SpinLoader';
+import  News  from './components/News/news';
+// import SpotifyComponent from './components/Spotify/SpotifyComponent';
 
 const Home = lazy(() => import('./components/Home/Home'));
 const SignUp = lazy(() => import('./components/User/SignUp'));
@@ -103,7 +105,8 @@ function App() {
               <Inbox />
             </PrivateRoute>
           } />
-
+          {/* <Route path="/direct/spotify" element={SpotifyComponent} /> */}
+          <Route path="/direct/new" element={<News/>} />
           <Route path="*" element={<NotFound />} />
 
         </Routes>

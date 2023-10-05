@@ -6,9 +6,9 @@ const PORT = process.env.PORT || 4000;
 connectDatabase();
 
 cloudinary.config({
-    cloud_name: process.env.CLOUDINARY_NAME,
-    api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET,
+    cloud_name: 'dldwctvii',
+    api_key: '233726997169546',
+    api_secret: 'cnrbIkEmXkFkWSjt02pJEGfOTH0',
 });
 
 const server = app.listen(PORT, () => {
@@ -16,10 +16,7 @@ const server = app.listen(PORT, () => {
 });
 
 
-// ============= socket.io ==============
-
 const io = require("socket.io")(server, {
-    // pingTimeout: 60000,
     cors: {
         origin: "http://localhost:3000",
     }

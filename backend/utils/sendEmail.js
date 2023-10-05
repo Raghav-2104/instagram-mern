@@ -1,11 +1,11 @@
 const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+sgMail.setApiKey('SG.UUwefwewrgI.efewfwewef');
 
 const sendEmail = async (options) => {
 
     const msg = {
         to: options.email,
-        from: process.env.SENDGRID_MAIL,
+        from: 'jhondoe@gmail.com',
         templateId: options.templateId,
         dynamic_template_data: options.data,
     }
