@@ -29,7 +29,7 @@ const Header = () => {
             <div className="flex flex-row justify-between items-center py-2 px-3.5 sm:w-full sm:py-2 sm:px-4 md:w-full md:py-2 md:px-6 xl:w-4/6 xl:py-3 xl:px-8 mx-auto">
 
                 {/* <!-- logo --> */}
-                <Link to="/"><img draggable="false" className="mt-1.5 w-full h-full object-contain" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="" /></Link>
+                <Link to="/"><img draggable="false" className="mt-1.5 h-10 w-10 object-contain" src="https://i.ibb.co/YjFM9Lb/Instify.png" alt="Logo"/></Link>
 
                 <SearchBox />
 
@@ -38,10 +38,10 @@ const Header = () => {
                     <Link to="/">{profileToggle || !onHome ? homeOutline : homeFill}</Link>
 
                     <Link to="/direct/inbox">{onChat ? messageFill : messageOutline}</Link>
-                    <Link to="/direct/new">Hello</Link>
+                    {/* <Link to="/direct/new">Hello</Link> */}
                     <div onClick={() => setNewPost(true)} className="cursor-pointer">{postUploadOutline}</div>
 
-                    <span className="hidden sm:block">{exploreOutline}</span>
+                    <Link to='/direct/new'><span className="hidden sm:block">{exploreOutline}</span></Link>
                     <span className="hidden sm:block">{likeOutline}</span>
 
                     <div onClick={() => setProfileToggle(!profileToggle)} className={`${profileToggle && 'border-black border' || (!onHome && !onChat) && 'border-black border'} rounded-full cursor-pointer h-7 w-7 p-[0.5px]`}><img draggable="false" loading="lazy" className="w-full h-full rounded-full object-cover" src={user.avatar.url} alt="" /></div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../news.css"; // Import a CSS file for styling (see explanation below)
+import "./news.css"; // Import a CSS file for styling (see explanation below)
 import { Marquee } from "../component/Marquee";
 export const News = () => {
     const [news, setNews] = useState([]);
